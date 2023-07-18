@@ -8,29 +8,20 @@
 /// <changed>ʆϒʅ, 18.07.2023</changed>
 // ===========================================================================
 
+import Settings from "./settings/page";
 
-//modules
-import Link from "next/link";
 import React from "react";
 
-export default function RootLayout({
+export default function DashboardLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link href="/dashboard">Dashboard</Link>
-                        </li>
-                    </ul>
-                </nav>
-                {children}
-            </body>
+        <section>
             {/* include shared ui e.g. headers, sidebar,... */}
-        </html>
+            <nav></nav>
+            {children}
+        </section>
     );
 }

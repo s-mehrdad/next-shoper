@@ -8,25 +8,20 @@
 /// <changed>ʆϒʅ, 18.07.2023</changed>
 // ===========================================================================
 
-//layouts
-import RootLayout from './layout'
-
 //components
-import Dashboard from "./dashboard/page";
-
-//styles
-import './globals.css'
+import Settings from "./settings/page";
 
 //modules
 import Link from "next/link";
+import React from "react";
 
-//assets
-import Image from "next/image";
-
-export default function Home() {
+export default function Dashboard() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <RootLayout/>
+        <main>
+            <div>Dashboard</div>
+            <Link href="/dashboard/settings">Settings</Link>
+            <div></div>
+            <main></main>
         </main>
     );
 }

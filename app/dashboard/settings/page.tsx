@@ -8,25 +8,14 @@
 /// <changed>ʆϒʅ, 18.07.2023</changed>
 // ===========================================================================
 
-//layouts
-import RootLayout from './layout'
+import React from "react";
 
-//components
-import Dashboard from "./dashboard/page";
-
-//styles
-import './globals.css'
-
-//modules
-import Link from "next/link";
-
-//assets
-import Image from "next/image";
-
-export default function Home() {
+export default function Settings() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <RootLayout/>
+        <main>
+            <div>Settings</div>
+            <div></div>
+            <main></main>
         </main>
     );
 }

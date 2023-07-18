@@ -1,27 +1,37 @@
+/* ===========================================================================
+/// <summary>
+/// globals.css
+// next-shoƥer
+/// created by Mehrdad Soleimanimajd on 10.07.2023
+/// </summary>
+/// <created>ʆϒʅ, 10.07.2023</created>
+/// <changed>ʆϒʅ, 18.07.2023</changed>
+=========================================================================== */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --background-color-start: 0, 157, 255, 0.47;
+    --background-color-end: 0, 0, 0, 0.46;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a {
+    color: black;
+}
+a:hover {
+    color: rgba(192, 40, 243);
+}
+
+@media() {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: darkslategrey;
+    background: linear-gradient(
+        rgba(var(--background-color-start)),
+        20%,
+        rgba(var(--background-color-end))
+    );
 }
