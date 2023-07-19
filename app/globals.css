@@ -1,11 +1,11 @@
 /* ===========================================================================
 /// <summary>
 /// globals.css
-// next-shoƥer
+/// next-shoƥer
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 18.07.2023</changed>
+/// <changed>ʆϒʅ, 19.07.2023</changed>
 =========================================================================== */
 
 @tailwind base;
@@ -34,4 +34,5 @@ body {
         20%,
         rgba(var(--background-color-end))
     );
+    padding: 30px;
 }

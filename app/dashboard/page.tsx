@@ -1,27 +1,44 @@
 // ===========================================================================
 /// <summary>
 /// page.tsx
-// next-shoƥer
+/// next-shoƥer
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 18.07.2023</changed>
+/// <changed>ʆϒʅ, 19.07.2023</changed>
 // ===========================================================================
 
-//components
-import Settings from "./settings/page";
-
 //modules
-import Link from "next/link";
-import React from "react";
+// import Link from "next/link";
+
+//components
+import Sidebar from "../components/sidebar";
+
+//layouts
+// import DashboardLayout from "./layout";
+import RootLayout from "../layout";
+
+//styles
+import "../globals.css";
+
+//assets
+
+function Test() {
+    return (
+        <>
+            <p>Dashboard Page</p>
+            <p>Dashboard Page</p>
+        </>
+    );
+}
 
 export default function Dashboard() {
     return (
-        <main>
-            <div>Dashboard</div>
-            <Link href="/dashboard/settings">Settings</Link>
-            <div></div>
-            <main></main>
+        <main className="flex flex-col items-center content-between">
+            <RootLayout>
+                <Sidebar />
+                <Test />
+            </RootLayout>
         </main>
     );
 }
