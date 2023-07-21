@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 19.07.2023</changed>
+/// <changed>ʆϒʅ, 21.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -25,8 +25,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>{children}</body>
-            {/* include shared ui e.g. headers, sidebar,... */}
+            <body>
+                {/* include shared ui e.g. headers, sidebar,... */}
+                {children}
+            </body>
         </html>
     );
 }

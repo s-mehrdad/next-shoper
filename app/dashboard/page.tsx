@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 19.07.2023</changed>
+/// <changed>ʆϒʅ, 21.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -34,11 +34,11 @@ function Test() {
 
 export default function Dashboard() {
     return (
-        <main className="flex flex-col items-center content-between">
-            <RootLayout>
-                <Sidebar />
+        <RootLayout>
+            <Sidebar />
+            <main id="view-content">
                 <Test />
-            </RootLayout>
-        </main>
+            </main>
+        </RootLayout>
     );
 }

@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 18.07.2023</created>
-/// <changed>ʆϒʅ, 19.07.2023</changed>
+/// <changed>ʆϒʅ, 21.07.2023</changed>
 // ===========================================================================
 
 "useClient";
@@ -20,7 +20,7 @@ import { useState } from "react";
 // import ..Layout from "./layout";
 
 //styles
-// import "./globals.css";
+import "./sidebar.css";
 
 //assets
 // import Image from "next/image";
@@ -28,14 +28,38 @@ import { useState } from "react";
 export default function Sidebar() {
     return (
         <>
-            <nav>
+            <nav className="bg-yellow-200"></nav>
+            <aside>
+                <label id="square-menu">
+                    <input id="square-menu-input" type="checkbox" />
+                    <div id="square-menu-span">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="hamburger-menu-span">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <div id="hyphen-menu">
+                    <label>
+                        <input type="checkbox" />
+                        <p>Menu</p>
+                        <span>-</span>
+                    </label>
+                </div>
                 <ul>
                     <li>
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li>
                         <Link href="/dashboard">Dashboard</Link>
+                    </li>
+                    <li>
                         <Link href="/dashboard/settings">Settings</Link>
                     </li>
                 </ul>
-            </nav>
+            </aside>
         </>
     );
 }

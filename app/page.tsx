@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 19.07.2023</changed>
+/// <changed>ʆϒʅ, 21.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -25,11 +25,11 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center content-between">
-            <RootLayout>
-                <Sidebar />
+        <RootLayout>
+            <Sidebar />
+            <main id="view-content">
                 <p>Home Page</p>
-            </RootLayout>
-        </main>
+            </main>
+        </RootLayout>
     );
 }
