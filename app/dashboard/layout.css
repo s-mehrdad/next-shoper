@@ -1,0 +1,18 @@
+/* ===========================================================================
+/// <summary>
+/// layout.css
+/// next-shoƥer
+/// created by Mehrdad Soleimanimajd on 22.07.2023
+/// </summary>
+/// <created>ʆϒʅ, 22.07.2023</created>
+/// <changed>ʆϒʅ, 22.07.2023</changed>
+=========================================================================== */
+
+ul {
+    float: none;
+    display: list-item;
+}
+
+ul {
+    clear: both;
+}

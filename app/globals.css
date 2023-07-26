@@ -13,8 +13,10 @@
 @tailwind utilities;
 
 :root {
-    --background-color-start: rgba(162, 199, 224, 0.721);
-    --background-color-end: rgba(238, 220, 220, 0.8);
+    --dark-theme-background-color-start: rgba(43, 74, 97, 0.721);
+    --dark-theme-background-color-end: rgba(12, 11, 11, 0.8);
+    --light-theme-background-color-start: rgba(162, 199, 224, 0.721);
+    --light-theme-background-color-end: rgba(238, 220, 220, 0.8);
 }
 
 a {
@@ -27,21 +29,38 @@ a:hover {
 @media() {
 }
 
+.dark-theme {
+    background: linear-gradient(
+        var(--dark-theme-background-color-start),
+        80%,
+        var(--dark-theme-background-color-end)
+    );
+    color: lightgoldenrodyellow;
+}
+.light-theme {
+    background: linear-gradient(
+        var(--light-theme-background-color-start),
+        80%,
+        var(--light-theme-background-color-end)
+    );
+    color: darkslategrey;
+}
+
 body {
     display: grid;
     grid-template: 10% auto / 10% auto;
     gap: 2px;
-    color: darkslategrey;
-    background: linear-gradient(
-        var(--background-color-start),
-        80%,
-        var(--background-color-end)
-    );
     padding: 30px;
-    width: 100vw;
+    /* width: 100vw;
+    height: 100vh; */
+    width: 100%;
     height: 100vh;
     padding: 20px;
     padding-left: 10%;
+}
+
+h2{
+    font-size: 30px;
 }
 
 #view-content {
@@ -53,7 +72,7 @@ body {
     height: 90%; */
 }
 
-nextjs-portal{
+nextjs-portal {
     display: none;
 }
 

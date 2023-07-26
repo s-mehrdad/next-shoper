@@ -23,14 +23,24 @@ import "../../globals.css";
 
 //assets
 
+function SettingsItems() {
+    return (
+        <ul>
+            <li>aaa</li>
+            <li>aab</li>
+        </ul>
+    );
+}
+
 export default function Settings() {
     return (
         <>
             <RootLayout>
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <DashboardLayout>
                     <main id="view-content">
                         <p>Settings Page</p>
+                        <SettingsItems />
                     </main>
                 </DashboardLayout>
             </RootLayout>

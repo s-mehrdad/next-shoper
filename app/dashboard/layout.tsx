@@ -15,6 +15,7 @@ import React from "react";
 //components
 
 //styles
+import './layout.css'
 
 //assets
 
@@ -24,7 +25,7 @@ export default function DashboardLayout({
     children: React.ReactNode;
 }) {
     return (
-        <section>
+        <section id="dashboard-layout">
             <div>{children}</div>
             {/* include shared ui e.g. headers, sidebar,... */}
         </section>

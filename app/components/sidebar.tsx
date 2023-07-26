@@ -5,10 +5,8 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 18.07.2023</created>
-/// <changed>ʆϒʅ, 21.07.2023</changed>
+/// <changed>ʆϒʅ, 26.07.2023</changed>
 // ===========================================================================
-
-"useClient";
 
 //modules
 import Link from "next/link";
@@ -28,7 +26,6 @@ import "./sidebar.css";
 export default function Sidebar() {
     return (
         <>
-            <nav className="bg-yellow-200"></nav>
             <aside>
                 <label id="square-menu">
                     <input id="square-menu-input" type="checkbox" />

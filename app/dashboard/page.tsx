@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 21.07.2023</changed>
+/// <changed>ʆϒʅ, 24.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -15,8 +15,8 @@
 import Sidebar from "../components/sidebar";
 
 //layouts
-// import DashboardLayout from "./layout";
-import RootLayout from "../layout";
+import DashboardLayout from "./layout";
+// import RootLayout from "../layout";
 
 //styles
 import "../globals.css";
@@ -34,11 +34,10 @@ function Test() {
 
 export default function Dashboard() {
     return (
-        <RootLayout>
-            <Sidebar />
-            <main id="view-content">
+        <DashboardLayout>
+            <main >
                 <Test />
             </main>
-        </RootLayout>
+        </DashboardLayout>
     );
 }
