@@ -5,21 +5,20 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 26.07.2023</changed>
+/// <changed>ʆϒʅ, 30.07.2023</changed>
 // ===========================================================================
 
 "use client";
 
 //modules
 import React from "react";
-// import Link from "next/link";
 import { useState } from "react";
+// import { useContext } from "react";
+// import Link from "next/link";
 
 //components
-import Sidebar from "./components/sidebar";
-import Navbar from "./components/navbar";
-// import ThemeType from "./components/theme-components";
-// import ThemeComponents from "./components/theme-components";
+import ThemeComponents from "./components/theme-components";
+import ThemeContext from "./components/app-context";
 
 //styles
 // import "./globals.css";
@@ -32,21 +31,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     const [currentTheme, setCurrentTheme] = useState("light-theme");
-    // setCurrentTheme(ThemeType);
-    // let aaa = "";
-    // console.log(ThemeType)
     return (
         <html lang="en">
             <body className={currentTheme}>
-                <Sidebar />
-                <Navbar
-                    currentTheme={currentTheme}
-                    onThemeChange={setCurrentTheme}
-                />
-                {/* <ThemeComponents cTheme={aaa} /> */}
-                {/* include shared ui e.g. headers, sidebar,... */}
-                {/* {currentTheme} */}
-                {children}
+                <ThemeContext.Provider value={currentTheme}>
+                    <ThemeComponents
+                        currentTheme={currentTheme}
+                        setCurrentTheme={setCurrentTheme}
+                    />
+                    {/* include shared ui e.g. headers, sidebar,... */}
+                    {children}
+                </ThemeContext.Provider>
             </body>
         </html>
     );

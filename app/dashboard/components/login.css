@@ -1,0 +1,20 @@
+/* ===========================================================================
+/// <summary>
+/// login.css
+/// next-shoƥer
+/// created by Mehrdad Soleimanimajd on 20.07.2023
+/// </summary>
+/// <created>ʆϒʅ, 20.07.2023</created>
+/// <changed>ʆϒʅ, 30.07.2023</changed>
+=========================================================================== */
+
+form {
+}
+
+p.logged-s {
+    visibility: visible;
+}
+
+p.logged {
+    visibility: collapse;
+}

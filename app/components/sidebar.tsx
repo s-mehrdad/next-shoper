@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 18.07.2023</created>
-/// <changed>ʆϒʅ, 26.07.2023</changed>
+/// <changed>ʆϒʅ, 30.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -55,6 +55,12 @@ export default function Sidebar() {
                     <li>
                         <Link href="/dashboard/settings">Settings</Link>
                     </li>
+                    {/* if (isLoggedIn == true){" "}
+                    { */}
+                        <li>
+                            <Link href="/dashboard/userspace">User Space</Link>
+                        </li>
+                    {/* } */}
                 </ul>
             </aside>
         </>

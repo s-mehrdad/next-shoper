@@ -5,18 +5,19 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 24.07.2023</changed>
+/// <changed>ʆϒʅ, 30.07.2023</changed>
 // ===========================================================================
 
 //modules
 // import Link from "next/link";
 
 //components
-import Sidebar from "../components/sidebar";
+// import Login from "./components/login";
+// import AuthenticateComponent from './components/authenticate-components'
 
 //layouts
 import DashboardLayout from "./layout";
-// import RootLayout from "../layout";
+import RootLayout from "../layout";
 
 //styles
 import "../globals.css";
@@ -34,10 +35,13 @@ function Test() {
 
 export default function Dashboard() {
     return (
-        <DashboardLayout>
-            <main >
-                <Test />
-            </main>
-        </DashboardLayout>
+        <RootLayout>
+            <DashboardLayout>
+                <main id="view-content">
+                    {/* <Login/> */}
+                    <Test />
+                </main>
+            </DashboardLayout>
+        </RootLayout>
     );
 }

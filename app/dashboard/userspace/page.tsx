@@ -2,9 +2,9 @@
 /// <summary>
 /// page.tsx
 /// next-shoƥer
-/// created by Mehrdad Soleimanimajd on 10.07.2023
+/// created by Mehrdad Soleimanimajd on 28.07.2023
 /// </summary>
-/// <created>ʆϒʅ, 10.07.2023</created>
+/// <created>ʆϒʅ, 28.07.2023</created>
 /// <changed>ʆϒʅ, 30.07.2023</changed>
 // ===========================================================================
 
@@ -16,7 +16,7 @@ import React from "react";
 
 //layouts
 import RootLayout from "../../layout";
-import DashboardLayout from "../layout";
+// import DashboardLayout from "../layout";
 
 //styles
 import "../../globals.css";
@@ -26,8 +26,10 @@ import "../../globals.css";
 function SettingsItems() {
     return (
         <ul>
-            <li>Theme</li>
-            <li>View</li>
+            <li>Already bought</li>
+            <li>Waiting for pay</li>
+            <li>Wish list</li>
+            <li>...</li>
         </ul>
     );
 }
@@ -37,10 +39,10 @@ export default function Settings() {
         <>
             <RootLayout>
                 {/* <DashboardLayout> */}
-                <main id="view-content">
-                    <p>Settings Page</p>
-                    <SettingsItems />
-                </main>
+                    <main id="view-content">
+                        <p>User Space</p>
+                        <SettingsItems />
+                    </main>
                 {/* </DashboardLayout> */}
             </RootLayout>
         </>
