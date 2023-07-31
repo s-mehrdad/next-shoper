@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -19,23 +19,70 @@ import RootLayout from "./layout";
 
 //styles
 import "./globals.css";
+import { ReactElement, ReactNode } from "react";
+import { NextPage } from "next";
+import { AppProps } from "next/app";
 
 //assets
 // import Image from "next/image";
 
-/* important credit */
+/* important credits */
+/* copyright: following template is built upon next/ react
+web development frameworks and strongly consumes their APIs created 
+to be used commercially under MIT licenses */
 /* copyright: following web site design is inspired and learned
 from free fronted web site, source codes hosted in code pen
 under MIT licenses of different authors and will be used commercially */
 
-export default function Home() {
+const Home: NextPageWithLayoutDefaultExport = () => {
     return (
-            <RootLayout>
-                <main id="view-content">
-                    <h2>next...shoƥer</h2>
-                    <p>Home Page</p>
-                    <Products />
-                </main>
-            </RootLayout>
+        <main id="view-content">
+            <h2>next...shoƥer</h2>
+            <p>Home Page</p>
+            <Products />
+        </main>
     );
+};
+
+Home.getLayout = function getLayout(page: ReactElement) {
+    return <RootLayout>{page}</RootLayout>;
+};
+
+// single shared
+export function Homea() {
+    return (
+        <RootLayout>
+            <main id="view-content">
+                <h2>next...shoƥer</h2>
+                <p>Home Page</p>
+                <Products />
+            </main>
+        </RootLayout>
+    );
+}
+
+export default Home;
+
+// with type script
+// TODO learn type script
+type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+    getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+    Component: NextPageWithLayout;
+};
+
+export function NextPageWithLayoutDefaultExport({
+    Component,
+    pageProps,
+// }: AppPropsWithLayout) {
+}:{
+    Component: any;
+    pageProps: any;
+}) {
+    // use layout of page if available
+    const getLayout = Component.getLayout || ((page: any) => page);
+
+    return getLayout(<Component {...pageProps} />);
 }

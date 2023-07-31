@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 28.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 28.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -16,7 +16,7 @@ import React from "react";
 
 //layouts
 import RootLayout from "../../layout";
-// import DashboardLayout from "../layout";
+import DashboardLayout from "../layout";
 
 //styles
 import "../../globals.css";
@@ -37,14 +37,14 @@ function SettingsItems() {
 export default function Settings() {
     return (
         <>
-            <RootLayout>
-                {/* <DashboardLayout> */}
+            {/* <RootLayout> */}
+                <DashboardLayout>
                     <main id="view-content">
                         <p>User Space</p>
                         <SettingsItems />
                     </main>
-                {/* </DashboardLayout> */}
-            </RootLayout>
+                </DashboardLayout>
+            {/* </RootLayout> */}
         </>
     );
 }

@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 28.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 28.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useContext } from "react";
 
 //components
-import LoginContext from "./app-context";
+import LoginContext from "../../components/login-context";
 // import AuthenticateContext from "./app-context";
 
 //layouts
@@ -57,72 +57,43 @@ export default function Login({
         });
     }
 
-    if (isAuthenticatedOne == true) {
-        return (
-            <>
-                    <p>welcome to you from authorities (AI :\)!</p>
-                    {isLoggedIn}
-                    <form action="submit" name="login">
-                        <label htmlFor="user-name">UserName: </label>
-                        <input
-                            type="text"
-                            name="login"
-                            id="user-name"
-                            value={initial}
-                            placeholder="initial"
-                            onChange={(e) => setInitial(e.target.value)}
-                        />
-                        <br />
-                        <label htmlFor="user-pass">Password: </label>
-                        <input
-                            type="text"
-                            name="login"
-                            id="user-pass"
-                            value={phrase}
-                            placeholder="phrase"
-                            onChange={(e) => setPhrase(e.target.value)}
-                        />
-                        <input
-                            type="button"
-                            value="submit"
-                            onClick={onLogin}
-                            className="border-2"
-                        />
-                    </form>
-            </>
-        );
-    } else {
-        return (
-            <>
-                <form action="submit" name="login">
-                    <label htmlFor="user-name">UserName: </label>
-                    <input
-                        type="text"
-                        name="login"
-                        id="user-name"
-                        value={initial}
-                        placeholder="initial"
-                        onChange={(e) => setInitial(e.target.value)}
-                    />
-                    <br />
-                    <label htmlFor="user-pass">Password: </label>
-                    <input
-                        type="text"
-                        name="login"
-                        id="user-pass"
-                        value={phrase}
-                        placeholder="phrase"
-                        onChange={(e) => setPhrase(e.target.value)}
-                    />
-                    <input
-                        type="submit"
-                        onChange={onLogin}
-                        className="border-2"
-                    />
-                </form>
-            </>
-        );
-    }
+    return (
+        <div id="app-component-login-one">
+            {isAuthenticatedOne ? (
+                <p>welcome to you from authorities (AI :\)!</p>
+            ) : (
+                <p>welcome home!</p>
+            )}
+            {isLoggedIn}
+            <form action="submit" name="login">
+                <label htmlFor="user-name">UserName: </label>
+                <input
+                    type="text"
+                    name="login"
+                    id="user-name"
+                    value={initial}
+                    placeholder="initial"
+                    onChange={(e) => setInitial(e.target.value)}
+                />
+                <br />
+                <label htmlFor="user-pass">Password: </label>
+                <input
+                    type="text"
+                    name="login"
+                    id="user-pass"
+                    value={phrase}
+                    placeholder="phrase"
+                    onChange={(e) => setPhrase(e.target.value)}
+                />
+                <input
+                    type="button"
+                    value="submit"
+                    onClick={onLogin}
+                    className="border-2"
+                />
+            </form>
+        </div>
+    );
 }
 
 const OPERATORS = [

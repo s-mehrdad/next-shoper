@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 23.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 23.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 "use client";
@@ -31,7 +31,9 @@ export default function ThemeComponents({
 }: {
     currentTheme: any;
     setCurrentTheme: any;
-}) {
+    }) {
+    const contextT = useContext(ThemeContext);
+    console.log(contextT)
     return (
         <>
             <ThemeContext.Provider value={currentTheme}>

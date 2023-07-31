@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 23.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 23.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -36,7 +36,7 @@ export default function Navbar({
 
     return (
         <>
-            <nav className="bg-yellow-400">
+            <nav id="app-component-navbar-one" className="bg-yellow-400">
                 <form name="theme" id="theme-hyphen-menu">
                     <label id="dark-theme-menu">
                         <input

@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 28.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 28.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 "use client";
@@ -18,7 +18,7 @@ import { useContext } from "react";
 
 //components
 import Login from "./login";
-import LoginContext from "./app-context";
+import LoginContext from "../../components/login-context";
 // import AuthenticateContext from "./app-context";
 
 //layouts
@@ -37,6 +37,8 @@ export default function Authenticate({
     isLoggedIn: any;
     setIsLoggedIn: any;
 }) {
+    const contextL = useContext(LoginContext);
+    console.log(contextL);
     return (
         <>
             <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />

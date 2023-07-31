@@ -5,14 +5,15 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 18.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 //components
+import LoginContext from "./login-context";
 
 //layouts
 // import ..Layout from "./layout";
@@ -24,9 +25,11 @@ import "./sidebar.css";
 // import Image from "next/image";
 
 export default function Sidebar() {
+    const isLoggedInContext = useContext(LoginContext);
     return (
         <>
-            <aside>
+            <div id="test"></div>
+            <aside id="app-component-sidebar-one">
                 <label id="square-menu">
                     <input id="square-menu-input" type="checkbox" />
                     <div id="square-menu-span">
@@ -55,12 +58,15 @@ export default function Sidebar() {
                     <li>
                         <Link href="/dashboard/settings">Settings</Link>
                     </li>
-                    {/* if (isLoggedIn == true){" "}
-                    { */}
+                    {isLoggedInContext ? (
                         <li>
                             <Link href="/dashboard/userspace">User Space</Link>
                         </li>
-                    {/* } */}
+                    ) : (
+                        <li>
+                            <Link href="/dashboard/userspace">Log in</Link>
+                        </li>
+                    )}
                 </ul>
             </aside>
         </>

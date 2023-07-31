@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -16,8 +16,8 @@
 // import AuthenticateComponent from './components/authenticate-components'
 
 //layouts
-import DashboardLayout from "./layout";
 import RootLayout from "../layout";
+import DashboardLayout from "./layout";
 
 //styles
 import "../globals.css";
@@ -35,13 +35,15 @@ function Test() {
 
 export default function Dashboard() {
     return (
-        <RootLayout>
-            <DashboardLayout>
+        <>
+            {/* <RootLayout> */}
+                <DashboardLayout>
                 <main id="view-content">
                     {/* <Login/> */}
                     <Test />
                 </main>
-            </DashboardLayout>
-        </RootLayout>
+                </DashboardLayout>
+            {/* </RootLayout> */}
+        </>
     );
 }

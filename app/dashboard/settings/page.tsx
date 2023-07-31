@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 31.07.2023</changed>
 // ===========================================================================
 
 //modules
@@ -35,14 +35,14 @@ function SettingsItems() {
 export default function Settings() {
     return (
         <>
-            <RootLayout>
-                {/* <DashboardLayout> */}
+            {/* <RootLayout> */}
+                <DashboardLayout>
                 <main id="view-content">
                     <p>Settings Page</p>
                     <SettingsItems />
                 </main>
-                {/* </DashboardLayout> */}
-            </RootLayout>
+                </DashboardLayout>
+            {/* </RootLayout> */}
         </>
     );
 }
