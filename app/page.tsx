@@ -34,7 +34,7 @@ to be used commercially under MIT licenses */
 from free fronted web site, source codes hosted in code pen
 under MIT licenses of different authors and will be used commercially */
 
-const Home: NextPageWithLayoutDefaultExport = () => {
+const Home= () => {
     return (
         <main id="view-content">
             <h2>next...shoƥer</h2>
@@ -49,40 +49,40 @@ Home.getLayout = function getLayout(page: ReactElement) {
 };
 
 // single shared
-export function Homea() {
-    return (
-        <RootLayout>
-            <main id="view-content">
-                <h2>next...shoƥer</h2>
-                <p>Home Page</p>
-                <Products />
-            </main>
-        </RootLayout>
-    );
-}
+// export function Homea() {
+//     return (
+//         <RootLayout>
+//             <main id="view-content">
+//                 <h2>next...shoƥer</h2>
+//                 <p>Home Page</p>
+//                 <Products />
+//             </main>
+//         </RootLayout>
+//     );
+// }
 
 export default Home;
 
 // with type script
 // TODO learn type script
-type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-    getLayout?: (page: ReactElement) => ReactNode;
-};
+// type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+//     getLayout?: (page: ReactElement) => ReactNode;
+// };
 
-type AppPropsWithLayout = AppProps & {
-    Component: NextPageWithLayout;
-};
+// type AppPropsWithLayout = AppProps & {
+//     Component: NextPageWithLayout;
+// };
 
-export function NextPageWithLayoutDefaultExport({
-    Component,
-    pageProps,
+// export function NextPageWithLayoutDefaultExport({
+//     Component,
+//     pageProps,
 // }: AppPropsWithLayout) {
-}:{
-    Component: any;
-    pageProps: any;
-}) {
-    // use layout of page if available
-    const getLayout = Component.getLayout || ((page: any) => page);
+// // }:{
+// //     Component: any;
+// //     pageProps: any;
+// // }) {
+//     // use layout of page if available
+//     const getLayout = Component.getLayout || (page => page);
 
-    return getLayout(<Component {...pageProps} />);
-}
+//     return getLayout(<Component {...pageProps} />);
+// }
