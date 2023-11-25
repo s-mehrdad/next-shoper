@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 20.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 20.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 25.11.2023</changed>
 =========================================================================== */
 
 aside {
@@ -65,8 +65,9 @@ ul {
 }
 
 #hyphen-menu {
-    /* clear: both; */
-    position: absolute;
+    clear: both;
+    /* position: relative; */
+    float: left;
     width: fit-content;
     height: fit-content;
     left: 300px;

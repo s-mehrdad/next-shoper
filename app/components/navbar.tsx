@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 23.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 23.07.2023</created>
-/// <changed>ʆϒʅ, 31.07.2023</changed>
+/// <changed>ʆϒʅ, 25.11.2023</changed>
 // ===========================================================================
 
 //modules
@@ -23,46 +23,62 @@ import "./navbar.css";
 //assets
 // import Image from "next/image";
 
-export default function Navbar({
-    currentTheme = "light-theme",
-    onThemeChange,
-}: {
-    currentTheme: any;
-    onThemeChange: any;
-}) {
+export default function Navbar(props: any) {
     // function themeSwitch(e) {
-    console.log(currentTheme);
+    console.log(props.currentTheme);
     // }
 
     return (
         <>
             <nav id="app-component-navbar-one" className="bg-yellow-400">
-                <form name="theme" id="theme-hyphen-menu">
-                    <label id="dark-theme-menu">
-                        <input
-                            id="dark-theme-input"
-                            type="radio"
-                            name="theme"
-                            value="dark-theme"
-                            onChange={(e) => onThemeChange(e.target.value)}
-                        />
-                        <span id="dark-theme-caption">Dark</span>
-                        {/* <div>Dark</div> */}
-                        <span id="dark-theme-span">-</span>
-                    </label>
-                    <label id="light-theme-menu">
-                        <input
-                            id="light-theme-input"
-                            type="radio"
-                            name="theme"
-                            value="light-theme"
-                            onChange={(e) => onThemeChange(e.target.value)}
-                        />
-                        {/* <div>Light</div> */}
-                        <span id="light-theme-caption">Light</span>
-                        <span id="light-theme-span">-</span>
-                    </label>
-                </form>
+                <ul>
+                    <li>
+                        <div id="theme-hyphen-menu">
+                            <label id="dark-theme-menu">
+                                <input
+                                    id="dark-theme-input"
+                                    type="radio"
+                                    name="theme"
+                                    value="dark-theme"
+                                    onChange={(e) =>
+                                        props.onThemeChange(e.target.value)
+                                    }
+                                />
+                                {/* <div>Dark</div> */}
+                                <span id="dark-theme-caption">Dark</span>
+                                <span id="dark-theme-span">-</span>
+                            </label>
+                            <label id="light-theme-menu">
+                                <input
+                                    id="light-theme-input"
+                                    type="radio"
+                                    name="theme"
+                                    value="light-theme"
+                                    onChange={(e) =>
+                                        props.onThemeChange(e.target.value)
+                                    }
+                                />
+                                {/* <div>Light</div> */}
+                                <span id="light-theme-caption">Light</span>
+                                <span id="light-theme-span">-</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <label id="app-component-user-panel">
+                                <input
+                                    id="user-panel-checkbox"
+                                    type="checkbox"
+                                    name="theme"
+                                    onChange={props.onUserPanelToggle}
+                                />
+                                <div>{props.children}</div>
+                                <span>User</span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
             </nav>
             {/* <aside>
                 <label id="square-menu">

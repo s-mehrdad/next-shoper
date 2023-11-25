@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 18.07.2023</created>
-/// <changed>ʆϒʅ, 31.07.2023</changed>
+/// <changed>ʆϒʅ, 25.11.2023</changed>
 // ===========================================================================
 
 //modules
@@ -26,6 +26,12 @@ import "./sidebar.css";
 
 export default function Sidebar() {
     const isLoggedInContext = useContext(LoginContext);
+
+    if (isLoggedInContext == true) {
+        console.log("logged in - sent from sidebar");
+    } else {
+        console.log("not yet logged in ... - sent from sidebar");
+    }
     return (
         <>
             <div id="test"></div>
@@ -64,7 +70,7 @@ export default function Sidebar() {
                         </li>
                     ) : (
                         <li>
-                            <Link href="/dashboard/userspace">Log in</Link>
+                            <Link href="/dashboard/login">Log in</Link>
                         </li>
                     )}
                 </ul>

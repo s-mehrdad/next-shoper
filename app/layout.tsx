@@ -5,15 +5,14 @@
 /// created by Mehrdad Soleimanimajd on 10.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 10.07.2023</created>
-/// <changed>ʆϒʅ, 31.07.2023</changed>
+/// <changed>ʆϒʅ, 23.11.2023</changed>
 // ===========================================================================
 
 "use client";
 
 //modules
 import React from "react";
-import { useState } from "react";
-// import { useContext } from "react";
+import { useState, useContext } from "react";
 // import Link from "next/link";
 
 //components
@@ -35,6 +34,9 @@ export default function RootLayout({
 }) {
     const [currentTheme, setCurrentTheme] = useState("light-theme");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const loginContext = useContext(LoginContext);
+    console.log(loginContext);
+    console.log(isLoggedIn);
     return (
         <html lang="en">
             <body className={currentTheme}>
@@ -44,11 +46,12 @@ export default function RootLayout({
                             currentTheme={currentTheme}
                             setCurrentTheme={setCurrentTheme}
                             // isloggedIn={isLoggedIn}
-                        />
-                        <Authentication
-                            isLoggedIn={isLoggedIn}
-                            setIsLoggedIn={setIsLoggedIn}
-                        />
+                        >
+                            <Authentication
+                                isLoggedIn={isLoggedIn}
+                                setIsLoggedIn={setIsLoggedIn}
+                            />
+                        </ThemeComponents>
                         {/* include shared ui e.g. headers, sidebar,... */}
                         {children}
                     </LoginContext.Provider>

@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 23.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 23.07.2023</created>
-/// <changed>ʆϒʅ, 31.07.2023</changed>
+/// <changed>ʆϒʅ, 25.11.2023</changed>
 // ===========================================================================
 
 "use client";
@@ -25,23 +25,19 @@ import Sidebar from "./sidebar";
 
 //assets
 
-export default function ThemeComponents({
-    currentTheme,
-    setCurrentTheme,
-}: {
-    currentTheme: any;
-    setCurrentTheme: any;
-    }) {
+export default function ThemeComponents(props: any) {
     const contextT = useContext(ThemeContext);
-    console.log(contextT)
+    console.log(contextT);
     return (
         <>
-            <ThemeContext.Provider value={currentTheme}>
+            <ThemeContext.Provider value={props.currentTheme}>
                 <Sidebar />
                 <Navbar
-                    currentTheme={currentTheme}
-                    onThemeChange={setCurrentTheme}
-                />
+                    currentTheme={props.currentTheme}
+                    onThemeChange={props.setCurrentTheme}
+                >
+                    {props.children}
+                </Navbar>
             </ThemeContext.Provider>
         </>
     );

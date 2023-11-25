@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 23.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 23.07.2023</created>
-/// <changed>ʆϒʅ, 30.07.2023</changed>
+/// <changed>ʆϒʅ, 25.11.2023</changed>
 =========================================================================== */
 
 nav {
@@ -13,7 +13,32 @@ nav {
     grid-row: 1;
     grid-column: 2;
     width: 100%;
-    height: 40px;
+    height: fit-content;
+    padding: 10px;
+}
+
+nav ul li {
+    /* float: right; */
+    list-style: none;
+}
+
+#app-component-user-panel {
+    display: block;
+    /* float: right; */
+    /* margin-left: -10; */
+    width: fit-content;
+    height: fit-content;
+    font-size: 15px;
+}
+#app-component-user-panel > div {
+    display: none;
+}
+#user-panel-checkbox {
+    display: none;
+}
+#app-component-user-panel input:checked + div {
+    display: block;
+    /* background-color: red; */
 }
 
 #theme-hyphen-menu {
@@ -21,10 +46,13 @@ nav {
     /* display: list-item; */
     float: right;
     /* position: absolute; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* text-align: center; */
     width: fit-content;
     height: fit-content;
     /* left: 300px; */
-    font-size: 20px;
+    font-size: 15px;
 }
 #theme-hyphen-menu input {
     display: none;
@@ -35,7 +63,6 @@ nav {
     left: -10px;
     top: 20px;
     font-size: 50px;
-    let: 1;
     color: black;
 }
 #theme-hyphen-menu #light-theme-span {

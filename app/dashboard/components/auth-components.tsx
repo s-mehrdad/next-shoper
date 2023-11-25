@@ -5,7 +5,7 @@
 /// created by Mehrdad Soleimanimajd on 28.07.2023
 /// </summary>
 /// <created>ʆϒʅ, 28.07.2023</created>
-/// <changed>ʆϒʅ, 31.07.2023</changed>
+/// <changed>ʆϒʅ, 23.11.2023</changed>
 // ===========================================================================
 
 "use client";
@@ -13,8 +13,7 @@
 //modules
 import React from "react";
 import Link from "next/link";
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 
 //components
 import Login from "./login";
@@ -37,11 +36,18 @@ export default function Authenticate({
     isLoggedIn: any;
     setIsLoggedIn: any;
 }) {
-    const contextL = useContext(LoginContext);
-    console.log(contextL);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const loginContext = useContext(LoginContext);
+    let cookie = false;
+    if (cookie == false) cookie = isLoggedIn;
+    console.log(cookie);
+    console.log(loginContext);
+    console.log(isLoggedIn);
     return (
         <>
-            <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <LoginContext.Provider value={isLoggedIn}>
+                <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            </LoginContext.Provider>
         </>
     );
 }
